@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens com Hover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 500px;
+            height: 500px;
+            display: block;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 120px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="IMAGEM/REMADA_ARTICULADA.png" alt="Imagem 1">
+            <div class="caption">A remada articulada é um excelente exercício para o trabalho de dorsais e permite uma série de variações.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="IMAGEM/REMADA_CAVALO.png" alt="Imagem 2">
+            <div class="caption">A remada cavalinho é um exercício composto onde há envolvimento de uma grande quantidade de massa muscular para sua realização.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="IMAGEM/REMADA_TRIANGULO.jpg" alt="Imagem 3">
+            <div class="caption">A remada triangulo é um exercício que ajuda a fortalecer os músculos das costas, do abdômen e dos braços, melhorando a força, </div>
+        </div>
+    </div>
+</body>
+</html>

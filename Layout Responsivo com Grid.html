@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "content"
+                "sidebar"
+                "footer";
+            grid-template-rows: auto 1fr auto auto;
+            gap: 10px;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            grid-area: content;
+            background-color: #f4f4f4;
+            padding: 2em;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #ddd;
+            padding: 2em;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "header header"
+                    "content sidebar"
+                    "footer footer";
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tecnologia e inovação: quais são as diferenças e a importância?</h1>
+        </header>
+        <main>
+            <p>A tecnologia e a inovação estão entre os principais impulsionadores do desenvolvimento humano.<br />
+            Muitas vezes confundidos, esses termos, embora relacionados, têm diferenças claras.<br />
+            <br />
+
+                Diferenças:<br />
+                <br />
+                
+                Tecnologia: Refere-se ao conjunto de ferramentas, técnicas e processos que usamos para resolver problemas e melhorar a vida. Desde a invenção da roda até o desenvolvimento da inteligência artificial, a tecnologia está sempre presente na evolução da humanidade.<br />
+                <br />
+                
+                Inovação: Trata-se da aplicação de novas ideias, produtos ou processos que geram valor. É sobre encontrar maneiras inéditas de usar a tecnologia ou criar soluções para necessidades ainda não atendidas.<br />
+                <br />
+                
+                Enquanto a tecnologia foca em meios e ferramentas, a inovação é o processo criativo que dá origem a essas novas ferramentas e as aplica de forma eficaz.<br />
+                <br />
+
+                Importância:<br />
+                <br />
+                A importância da tecnologia e inovação se reflete em praticamente todos os aspectos da vida moderna.
+                Na educação, elas transformam o modo de ensinar e aprender, tornando o conhecimento mais acessível.
+                Na saúde, melhoram tratamentos e diagnósticos. No mercado, empresas que inovam constantemente têm mais chances de crescer e se manter competitivas.
+                Ambos são essenciais para o progresso, mas é a inovação que move a tecnologia para frente, adaptando-a às mudanças e demandas da sociedade.<br />
+                
+                </p>
+        </main>
+        <div class="sidebar">
+            <p>Exemplos de Inovações Recentes:<br />
+                <br />
+
+                1. Inteligência Artificial (IA): A IA está revolucionando áreas como saúde, educação e negócios, permitindo automação avançada, diagnósticos médicos mais precisos e experiências personalizadas.<br />
+                <br />
+                
+                2. Tecnologias Verdes: Inovações no setor de energia sustentável, como os avanços em painéis solares e baterias de longa duração, estão ajudando a combater as mudanças climáticas.<br />
+                <br />
+                
+                3. 5G e Conectividade: O 5G está transformando a forma como nos conectamos, permitindo velocidades de internet sem precedentes e uma conectividade mais eficiente para dispositivos inteligentes.<br />
+                <br />
+                
+                4. Automação Industrial: Máquinas inteligentes e robôs estão assumindo tarefas repetitivas e perigosas, aumentando a eficiência e segurança nas indústrias.<br />
+                <br />                
+                
+                Curiosidade: A cada ano, mais de 80% das inovações tecnológicas são desenvolvidas por empresas de pequeno e médio porte, destacando a importância da inovação no setor empresarial.
+                
+                .</p>
+        </div>
+        <footer>
+            <p>&copy; 2024 - Todos os direitos reservados.</p>
+            <p><a href="mailto:contato@tecnologiainovacao.com">contato@tecnologiainovacao.com</a> | Telefone: (87) 1234-7978</p>
+            <p>Endereço: Rua das Inovações, N° 777 - ARCOVERDE, PE</p>
+        </footer>
+    </div>
+</body>
+</html>
